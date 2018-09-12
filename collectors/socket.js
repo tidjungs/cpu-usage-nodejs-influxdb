@@ -3,8 +3,6 @@ const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 8080 });
 
-const clients = []
-
 wss.on('connection', function (ws, req) {
   const ip = req.connection.remoteAddress;
   const port = req.connection.remotePort;
@@ -16,7 +14,7 @@ wss.on('connection', function (ws, req) {
         ws.send(v);
       }
     });
-  }, 500)
+  }, 100)
   ws.on('close', function () {
     ws.isAlive = false;
     clearInterval(interval)

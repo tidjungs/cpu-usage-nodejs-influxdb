@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "nodemon api.js"
+    "api": "nodemon api.js",
+    "socket-collector": "nodemon ./collectors/socket.js",
+    "influx-collector": "nodemon ./collectors/influx.js",
+    "client": "nodemon client.js"
   },
   "author": "",
   "license": "ISC",
