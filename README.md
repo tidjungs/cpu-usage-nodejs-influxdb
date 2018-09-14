@@ -1,5 +1,10 @@
 # Monitoring CPU Usage Backend
 
+### installation
+```
+npm install
+```
+
 ### start web socket collector
 ```
 npm run socket-collector
